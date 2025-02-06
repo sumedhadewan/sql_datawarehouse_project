@@ -26,6 +26,12 @@ More details on data layers:
 ||Bronze layer|Silver layer|Gold layer|
 |:----:|:----------:|:----------:|:--------:|
 |Definition| Raw, unprocessed data as-is from sources| clearn & standarized data | Business ready data|
+|Objective| Tracebility & debugging | Prepare data for analysis|Prepare data to be consumed for reporting & analytics|
+|Object type|Tables|Tables|Views|
+|Load method| Full load(Truncate &insert) | Full load | None|
+|Data transformation| None | Data cleaning, standardization| normalization, derived columns, data enrichment | Data integration, aggregation, business logic & rules|
+|Data modelling| None(as-is)|None (as-is)|Star schema, aggregated objects, flat tables|
+|Target audience| Data engineers| Data analyst, engineers|Data analyst, business users|
 
 
 
