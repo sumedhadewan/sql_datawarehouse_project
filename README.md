@@ -22,6 +22,11 @@ The data architecture for this project follows Medallion architecture (bronze, s
 
 ![GitHub Logo](https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/Data%20architecture.svg)
 
+More details on data layers:
+||Bronze layer|Silver layer|Gold layer|
+|:----:|:----------:|:----------:|:--------:|
+|Definition| Raw, unprocessed data as-is from sources| clearn & standarized data | Business ready data|
+
 
 
 
