@@ -7,8 +7,8 @@ This project is divided into two part
 
 1. Building data warehouse (Data engineering) : Developing modern data warehouse using PostgresSQL covering data architecture, designing ETL pipelines, data modeling.
 2. Analytics & reporting: Creating SQL-based reports for actional insights with key business metrics, enabling stakeholder on srtategic decision-making.
-   a. Customer behaviour
-   b. Product performance
-   c. Sales trend
+   - Customer behaviour
+   - Product performance
+   - Sales trend
 
 
