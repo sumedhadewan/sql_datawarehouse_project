@@ -20,5 +20,8 @@ Specifications:
 # Data architecture
 The data architecture for this project follows Medallion architecture (bronze, silver, gold layers).
 
+![GitHub Logo](docs/Untitled Diagram.drawio(2).svg)
+
+
 
 
