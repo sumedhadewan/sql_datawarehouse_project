@@ -20,7 +20,7 @@ Specifications:
 # Data architecture
 The data architecture for this project follows Medallion architecture (bronze, silver, gold layers).
 
-![GitHub Logo](https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/Data%20architecture.svg)
+![GitHub Logo](https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/Data%20architecture.svg)
 
 More details on data layers:
 ||Bronze layer|Silver layer|Gold layer|
