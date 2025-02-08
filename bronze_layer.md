@@ -1,10 +1,11 @@
 ## Bronze layer
-It is a first layer and stores raw data as-is from sources. Data is ingested from CSV files into PostgreSQL database.
+It is the first layer and stores raw data as-is from sources. Data is ingested from CSV files into PostgreSQL database.
 
-<b>Analyze source system</b> : As specified, focus is only the latest dataset. Historization is not required. There are 6 csv files coming from CRM and ERP systems. All csv files are fully loaded (no batch loading).
+<b>Analyze source system</b> : As specified, focus is only the latest dataset. Historization is not required. There are 6 CSV files coming from CRM and ERP systems. All CSV files are fully loaded (no batch loading).
 
 <b>Data ingestion</b>: Let's first explore the data in each csv files to identify column names and data types.
-Next created database name sql_database using pgAdmin, 3 schemas followed by 6 tables under bronze schemas.
+Next created database name `sql_database` using pgAdmin, 3 schemas followed by 6 tables under bronze schema.
+
 
 ```
 CREATE DATABASE sql_database
@@ -25,7 +26,7 @@ CREATE TABLE bronze.erp_px_cat_g1v2(
 
 ```
 
-Using `TRUNCATE` and `COPY` command to perform bulk insert from csv files to database. This script is run on a daily basis to get a new content to data warehouse. so this is SQL code is saved as stored procedures in bronze layer.
+Using `TRUNCATE` and `COPY` command to perform bulk insert from csv files to database. 
 ```
 TRUNCATE bronze.erp_cust_az12;
 
@@ -34,6 +35,8 @@ FROM '/Users/____/sql-data-warehouse-project/datasets/source_erp/PX_CAT_G1V2.csv
 DELIMITER ','
 CSV header;
 ```
+**This script is run on a daily basis to get a new content to data warehouse. The SQL code is saved as stored procedure in bronze layer.**
+
 Data quality check:
 After bulk inserting, it is important to check that data has not shifted and is in the correct column.
 ```
@@ -50,3 +53,6 @@ FROM bronze.erp_px_cat_g1v2;
 2. Added `RAISE NOTICE` to track execution, debug issues and understand flow.
 3. Catch errors using `EXCEPTION` and `WHEN others THEN` for easier debugging.
 4. Track ETL duration by defining variables and assigning the start & end time using `CURRENT_TIMESTAMP` and calculating the difference in seconds.
+
+
+  <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_flow%20(bronze%20layer).drawio.svg" alt="data_flow" width="300"/>
