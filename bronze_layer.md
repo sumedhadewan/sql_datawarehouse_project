@@ -1,5 +1,7 @@
 ## Bronze layer
-It is the first layer and stores raw data as-is from sources. Data is ingested from CSV files into PostgreSQL database.
+It is the first layer and stores raw data as-is from sources. Data is ingested from CSV files into PostgreSQL database. 
+
+[Complete SQL script here](https://github.com/sumedhadewan/sql_datawarehouse_project/tree/main/script/bronze)
 
 <b>Analyze source system</b> : As specified, focus is only the latest dataset. Historization is not required. There are 6 CSV files coming from CRM and ERP systems. All CSV files are fully loaded (no batch loading).
 
