@@ -8,7 +8,7 @@ It is the first layer and stores raw data as-is from sources. Data is ingested f
 <b>Data ingestion</b>: Let's first explore the data in each csv files to identify column names and data types.
 Next created database name `sql_database` using pgAdmin, 3 schemas followed by 6 tables under bronze schema.
 <br>
-[Complete SQL script here](https://github.com/sumedhadewan/sql_datawarehouse_project/tree/main/script/bronze).
+[DDL script here](https://github.com/sumedhadewan/sql_datawarehouse_project/tree/main/script/bronze).
 
 ```
 CREATE DATABASE sql_database
