@@ -47,7 +47,7 @@ CSV header;
 4. Track ETL duration by defining variables and assigning the start & end time using `CURRENT_TIMESTAMP` and calculating the difference in seconds.
 
 
-Data quality check:
+<b>Data quality check:</b>
 After bulk inserting, it is important to check that data has not shifted and is in the correct column.
 ```
 SELECT count(*)
