@@ -1,10 +1,10 @@
 ## Bronze layer
 It is the first layer and stores raw data as-is from sources. Data is ingested from CSV files into PostgreSQL database. 
-
-  <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_flow_bronze_layer.drawio.svg" width="300"/>
   
 <b>Analyze source system</b> : As specified, focus is only the latest dataset. Historization is not required. There are 6 CSV files coming from CRM and ERP systems. All CSV files are fully loaded (no batch loading).
 
+  <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_flow_bronze_layer.drawio.svg" width="300"/>
+  
 <b>Data ingestion</b>: Let's first explore the data in each csv files to identify column names and data types.
 Next created database name `sql_database` using pgAdmin, 3 schemas followed by 6 tables under bronze schema.
 <br>
