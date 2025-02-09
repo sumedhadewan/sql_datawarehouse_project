@@ -14,7 +14,7 @@ CREATE TABLE bronze.crm_cust_info(
 	cst_marital_status VARCHAR(50),
 	cst_gndr VARCHAR(50),
 	cst_create_date DATE
-)
+);
 
 DROP TABLE IF EXISTS bronze.crm_prd_info;
 CREATE TABLE bronze.crm_prd_info(
@@ -27,7 +27,7 @@ CREATE TABLE bronze.crm_prd_info(
 	prd_end_dt DATE
 );
 
-DROP IF EXISTS bronze.crm_sales_details;
+DROP TABLE IF EXISTS bronze.crm_sales_details;
 CREATE TABLE bronze.crm_sales_details(
 	sls_ord_num VARCHAR(50),
 	sls_prd_key VARCHAR(50),
