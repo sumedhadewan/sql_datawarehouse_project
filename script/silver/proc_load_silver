@@ -22,7 +22,7 @@ BEGIN
 		cst_marital_status,
 		cst_gndr,
 		cst_create_date
-	);
+	)
 	SELECT 
 		cst_id,
 		cst_key,
@@ -76,7 +76,7 @@ BEGIN
 	FROM bronze.crm_prd_info;
 
 	RAISE NOTICE 'Truncating table: crm_sales_details';
-	TRUNCATE TABLE crm_sales_details;
+	TRUNCATE TABLE silver.crm_sales_details;
 	RAISE NOTICE 'Inserting data into: crm_sales_details';
 	INSERT INTO silver.crm_sales_details(
 		sls_ord_num,
@@ -88,7 +88,7 @@ BEGIN
 		sls_sales,
 		sls_quantity,
 		sls_price
-	);
+	)
 	SELECT 
 		sls_ord_num,
 		sls_prd_key,
@@ -148,7 +148,7 @@ BEGIN
 	INSERT INTO silver.erp_loc_a101(
 		cid,
 		cntry
-	);
+	)
 	SELECT 
 		REPLACE(cid,'-','') AS cid,
 		CASE 
