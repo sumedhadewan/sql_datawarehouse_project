@@ -1,3 +1,18 @@
+/*
+---------------------------------------------------------------------
+Store procedure in silver layer
+
+Name: load_silver
+
+Parameters: None
+
+Purpose: This store procedure performs the ETL (Extract, transform, Load) process to populate 
+the 'silver' schema tables from the 'bronze' schema.
+
+Execute this procedure:
+  CALL silver.load_silver()
+_________________________________________________________________________________
+*/
 
 CREATE OR REPLACE PROCEDURE silver.load_silver ()
 LANGUAGE plpgsql
