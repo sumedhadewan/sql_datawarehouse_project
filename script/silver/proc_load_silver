@@ -45,10 +45,10 @@ BEGIN
 		TRIM(cst_lastname) cst_lastname,
 		CASE WHEN UPPER(TRIM(cst_marital_status))='M' THEN 'Married'
 		WHEN UPPER(TRIM(cst_marital_status)) = 'S' THEN 'Single'
-		ELSE 'n/a' END AS cst_marital_status,
+		ELSE 'n/a' END AS cst_marital_status, --Normalize status to readable format
 		CASE WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
 		WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
-		ELSE 'n/a' END AS cst_gndr,
+		ELSE 'n/a' END AS cst_gndr, -- Normaliza gender to readable format
 		cst_create_date
 	FROM
 	(
@@ -58,7 +58,7 @@ BEGIN
 		FROM bronze.crm_cust_info
 		WHERE cst_id IS NOT NULL
 	 ) AS sub
-	 WHERE latest_flag = 1;
+	 WHERE latest_flag = 1; --Select the lastest record for each customer
 
 	RAISE NOTICE 'Truncating table: silver.crm_prd_info';
 	TRUNCATE TABLE silver.crm_prd_info;
