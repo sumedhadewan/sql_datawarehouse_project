@@ -1,10 +1,13 @@
 # Silver layer
 This layer includes data cleaning, standarization and normalization processes to prepare data for analysis.
 
-<b>Analyzing the source </b> : Lets explore all the 6 tables in bronze layer and understand how tables are related to eachother. 
-<img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/integration_model.drawio.svg"/>
+<b>Analyzing the source </b> : Lets create 6 tables in silver layer similar to bronze layer.
 
-Next created 6 tables in silver layer similar to bronze layer
+
+<img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_flow_silver_layer.drawio.svg" width="450" />
+
+
+
 
 ```
 DROP TABLE IF EXISTS silver.erp_px_cat_g1v2;
@@ -16,4 +19,6 @@ CREATE TABLE silver.erp_px_cat_g1v2(
 );
 
 ```
-<b>Data cleaning</b>
+<b>Data cleaning</b>:
+First explore all the 6 tables in bronze layer and understand how tables are related to eachother. 
+<img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/integration_model.drawio.svg"/>
