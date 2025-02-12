@@ -6,9 +6,7 @@ This layer includes data cleaning, standarization and normalization processes to
 
 <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_flow_silver_layer.drawio.svg" width="450" />
 
-
-
-
+[DDL script here](https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/script/silver/ddl_silver.sql)
 ```
 DROP TABLE IF EXISTS silver.erp_px_cat_g1v2;
 CREATE TABLE silver.erp_px_cat_g1v2(
