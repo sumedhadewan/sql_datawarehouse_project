@@ -1,7 +1,7 @@
 # Silver layer
 This layer includes data cleaning, standarization and normalization processes to prepare data for analysis.
 
-<b>Analyzing the source </b> : Lets create 6 tables in silver layer similar to bronze layer.
+<b>Analyzing the source </b> : Only data transformation takes place in silver layer. There is data modelling so Lets create 6 tables in silver layer similar to bronze layer
 
 
 <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_flow_silver_layer.drawio.svg" width="450" />
