@@ -5,8 +5,10 @@ This layer is where data modelling takes place where data from silver layer tabl
 <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/integration_model.drawio_final.svg">
 
 <b>Data integration :</b> 
-- dim_customers : Take `silver.crm_cust_info` and left join other two tables `silver.erp_cust_az12` and `silver.erp_loc_a101` and save it as Views. Surrogate key `customer_key` is generated as a unique identifier to each record in table.
+- dim_customers : Take `silver.crm_cust_info` and LEFT JOIN other two tables `silver.erp_cust_az12` and `silver.erp_loc_a101` and save it as Views. Surrogate key `customer_key` is generated as a unique identifier to each customer record in this view.
 
   Note that master source of customer data is CRM. Example- gender column exists in both crm and erp tables.
 
-- dim_products : 
+- dim_products : `silver.crm_prd_info` and `silver.erp_px_cat_g1v2` are joined using LEFT JOIN and saved as views. Surrogate key `product_key` is generated as unique identifier for each product record in this view.
+
+- fact_sales :
