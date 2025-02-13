@@ -5,4 +5,4 @@ This layer is where data modelling takes place where data from silver layer tabl
 <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/integration_model.drawio_final.svg">
 
 <b>Data integration :</b> 
-- Customer : Take `silver.crm_cust_info` and left join other two tables `silver.erp_cust_az12` and `silver.erp_loc_a101`
+- dim_customers : Take `silver.crm_cust_info` and left join other two tables `silver.erp_cust_az12` and `silver.erp_loc_a101` and save it as Views.
