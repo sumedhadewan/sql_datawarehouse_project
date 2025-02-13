@@ -14,3 +14,7 @@ Building two dimension tables and one fact table as below.
 - dim_products : `silver.crm_prd_info` and `silver.erp_px_cat_g1v2` are joined using LEFT JOIN and saved as views in gold layer as `gold.dim_products`. Surrogate key `product_key` is generated as unique identifier for each product record in this view.
 
 - fact_sales : `silver.crm_sales_details` are joined with `gold.dim_customers` and `gold.dim_products`using LEFT JOIN to add surrogate keys `product_key` and `customer_key`. This is to connect tables in data model using surrogate keys.
+
+  <b><Data model</b>
+
+  <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_model.drawio.svg">
