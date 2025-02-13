@@ -5,10 +5,12 @@ This layer is where data modelling takes place where data from silver layer tabl
 <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/integration_model.drawio_final.svg">
 
 <b>Data integration :</b> 
-- dim_customers : Take `silver.crm_cust_info` and LEFT JOIN other two tables `silver.erp_cust_az12` and `silver.erp_loc_a101` and save it as Views. Surrogate key `customer_key` is generated as a unique identifier to each customer record in this view.
+Building two dimension tables and one fact table as below.
+
+- dim_customers : Take `silver.crm_cust_info` and LEFT JOIN other two tables `silver.erp_cust_az12` and `silver.erp_loc_a101` and save it as Views in gold layer as `gold.dim_customers`. Surrogate key `customer_key` is generated as a unique identifier to each customer record in this view.
 
   Note that master source of customer data is CRM. Example- gender column exists in both crm and erp tables.
 
-- dim_products : `silver.crm_prd_info` and `silver.erp_px_cat_g1v2` are joined using LEFT JOIN and saved as views. Surrogate key `product_key` is generated as unique identifier for each product record in this view.
+- dim_products : `silver.crm_prd_info` and `silver.erp_px_cat_g1v2` are joined using LEFT JOIN and saved as views in gold layer as `gold.dim_products`. Surrogate key `product_key` is generated as unique identifier for each product record in this view.
 
-- fact_sales :
+- fact_sales : `silver.crm_sales_details` are joined with `gold.dim_customers` and `gold.dim_products`using LEFT JOIN to add surrogate keys `product_key` and `customer_key`. This is to connect tables in data model using surrogate keys.
