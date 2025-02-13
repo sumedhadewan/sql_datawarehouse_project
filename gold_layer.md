@@ -15,6 +15,6 @@ Building two dimension tables and one fact table as below.
 
 - fact_sales : `silver.crm_sales_details` are joined with `gold.dim_customers` and `gold.dim_products`using LEFT JOIN to add surrogate keys `product_key` and `customer_key`. This is to connect tables in data model using surrogate keys.
 
-  <b><Data model</b>
+  <b> Data model</b>: in a star schema, the relationship between fact and dimension is 1-to-many (1:N)
 
   <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_model.drawio.svg">
