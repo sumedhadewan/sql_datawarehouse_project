@@ -15,6 +15,7 @@ CREATE TABLE silver.erp_px_cat_g1v2(
 	maintenance VARCHAR(50)
 );
 ```
+While creating tables, we add meta-data information `dwh_create_date DATE DEFAULT CURRENT_TIMESTAMP` to each of 6 tables.
 [DDL script here](https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/script/silver/ddl_silver.sql)
 
 <b>Data transformation</b>:
