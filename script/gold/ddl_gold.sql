@@ -1,7 +1,17 @@
+/*
+---------------------------------------------------------------
+DDL script: create tables in gold schema.
 
-/*----------------------------------------------------
-Create Dimension : gold.dim_customers
-______________________________________________________*/
+Purpose: This script creates 3 views in 'gold' schema
+These 3 views represents the final dimension and fact tables (Star schema)
+
+Each view performs transformations and combines data from the silver schema 
+to produce clean, enriched and business-ready dataset.
+
+Usage: These views can be queried directly for analytics and reporting.
+_______________________________________________________________
+*/
+
 CREATE OR REPLACE VIEW gold.dim_customers AS
 SELECT 
 	ROW_NUMBER() OVER(ORDER BY cst_id) AS customer_key,
