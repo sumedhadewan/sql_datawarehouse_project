@@ -4,7 +4,7 @@ The gold layer consists of dimension tables and fact tables for business specifi
 
 ### 1. gold.dim_customers
 - Purpose : contains customer details such as demographic and geographic details.
-- Columns
+- Columns:
   | Column name | Data type | Description|
   |----|-----|-----|
   | customer_key| INT | Surrogate key. A unique identifier for each customer record.|
@@ -35,5 +35,19 @@ The gold layer consists of dimension tables and fact tables for business specifi
   |product_line|VARCHAR(50)| The specific product line to which product belongs such as 'Road','Mountain'.|
   |start_date|DATE| The date when the product was available for sale|
   
+  ### 3. gold.fact_sales
+  - Purpose : Stores transactional sales record.
+  - Columns:
   
+  | Column name | Data type | Description|
+  |----|-----|-----|
+  |order_number| VARCHAR(50)| A identifier for each sales order.|
+  |product_key|INT| Surrogate key linking the order to the product dimension table.|
+  |customer_key|INT| Surrogate key linking the order to the customer dimension table.|
+  |order_date|DATE|The date when the order was placed.|
+  |shipping_date|DATE|The date when order was shipped to customer.|
+  |due_date|DATE| The date when order payment was due.|
+  |sales_amount| INT|The total value.|
+  |quantity|INT| The number of units of the product ordered.|
+  |price|INT|The price per unit of the product.|
   
