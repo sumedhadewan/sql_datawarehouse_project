@@ -1,5 +1,8 @@
 
-CREATE VIEW gold.dim_customers AS
+/*----------------------------------------------------
+Create Dimension : gold.dim_customers
+______________________________________________________*/
+CREATE OR REPLACE VIEW gold.dim_customers AS
 SELECT 
 	ROW_NUMBER() OVER(ORDER BY cst_id) AS customer_key,
 	ci.cst_id AS customer_id,
@@ -18,7 +21,11 @@ ON ci.cst_key = ca.cid
 LEFT JOIN silver.erp_loc_a101 AS la
 ON ci.cst_key = la.cid
 
-CREATE VIEW gold.dim_products AS
+/*----------------------------------------------------
+Create Dimension : gold.dim_products
+______________________________________________________*/
+	
+CREATE OR REPLACE VIEW gold.dim_products AS
 SELECT 
     ROW_NUMBER() OVER (ORDER BY pi.prd_start_dt, pi.prd_key) AS product_key,
     pi.prd_id AS product_id,
@@ -33,9 +40,14 @@ SELECT
     pi.prd_start_dt AS start_date
 FROM silver.crm_prd_info pi
 LEFT JOIN silver.erp_px_cat_g1v2 pc 
-ON pi.cat_id = pc.id;
+ON pi.cat_id = pc.id
+WHERE pi.prd_end_dt IS NULL; -- Filtering out all historical prices.
 
-CREATE VIEW gold.fact_sales AS
+/*----------------------------------------------------
+Create Dimension : gold.fact_sales
+______________________________________________________*/
+
+CREATE OR REPLACE VIEW gold.fact_sales AS
 SELECT 
     sd.sls_ord_num AS order_number,
     pr.product_key,
