@@ -31,6 +31,9 @@ The gold layer consists of dimension tables and fact tables for business specifi
   |category|VARCHAR(50)| Broader classification of product such as Bokes, Clothing etc|
   |subcategory|VARCHAR(50)|A more detailed classification of the product within the category|
   |maintenance_required|VARCHAR(50)| Indicated whether the product requires maintenance e.g. 'Yes','No'|
+  |cost|INT| Price of the product|
+  |product_line|VARCHAR(50)| The specific product line to which product belongs such as 'Road','Mountain'.|
+  |start_date|DATE| The date when the product was available for sale|
   
   
   
