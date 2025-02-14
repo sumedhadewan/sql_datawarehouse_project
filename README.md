@@ -33,6 +33,8 @@ More details on data layers:
 |Data modelling| None(as-is)|None (as-is)|Star schema, aggregated objects, flat tables|
 |Target audience| Data engineers| Data analyst, engineers|Data analyst, business users|
 
-
+## Data catalog : 
+An organised list of data assets found in final gold layer designed to help data professional to quickly find the most appropriate data for any analytical or business purpose. 
+[Here](https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/data_catalog.md)
 
 
