@@ -18,3 +18,7 @@ Building two dimension tables and one fact table as below.
 <b>Data model</b>: in a star schema, the relationship between fact and dimension is 1-to-many (1:N)
 
   <img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_model.drawio.svg">
+
+<b>Data flow :</b>
+
+<img src="https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/docs/images/data_flow_gold_layer.drawio.svg">
