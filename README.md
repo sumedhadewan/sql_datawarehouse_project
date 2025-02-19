@@ -32,6 +32,7 @@ More details on data layers:
 |Data transformation| None | Data cleaning, standardization| normalization, derived columns, data enrichment | Data integration, aggregation, business logic & rules|
 |Data modelling| None(as-is)|None (as-is)|Star schema, aggregated objects, flat tables|
 |Target audience| Data engineers| Data analyst, engineers|Data analyst, business users|
+|Script |[Bronze](https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/bronze_layer.md)|[Silver](https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/silver_layer.md) | [Gold](https://github.com/sumedhadewan/sql_datawarehouse_project/blob/main/gold_layer.md)|
 
 ## Data catalog : 
 An organised list of data assets found in final gold layer designed to help data professional to quickly find the most appropriate data for any analytical or business purpose. 
